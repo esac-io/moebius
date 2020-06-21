@@ -7,43 +7,47 @@
   The name is just a humble homage to a grate artist called: Jean
   "moebius" Giraud, may you rest in peace and love.
 
-  And a big =thank you= for your work and contributions, they are
-  so inspiring.
+  Your priceless work and contributions will never be forgotten,
+  let them inspiring generations to come.
 
 * Overview
 
   If you use some composition software it's possible to make Emacs
   window (the frame) transparent over the display server (Xorg for
-  example), a lot of themes does not take that in count when the
-  colors are choose to compose the theme in question.
+  example), a lot of themes does not take that in count, when the
+  colors are chosen to compose the theme in question.
 
-  As I use Emacs with compton compositor to make the frame transparent
-  (about 90% opacity is applied) was necessary to create a new theme to
-  assert the faces (colors and other properties), to provide,
+  As I use Emacs with compton compositor (and apply 90% of opacity to
+  it) to make the frame transparent was necessary to create a new theme
+  to assert the faces (colors and other properties), to provide
   a clear view of the items displayed on the screen.
 
   The files moebius-theme.el (the dark version) and
   moebius-theme-yellow.el (light yellow version) are the results
-  of this experimentation over the last ear.
+  of this experimentation over the last year.
 
 * Installation
 
-  As usual just clone the repository and put them (the lisp theme
-  files) where =custom-theme-load-path= variable are point to
-  (probably =~/.emacs.d/themes=), do enable then dynamically use
-  the command: =M-x load-theme RET= and select the =moebius= theme.
+  As usual just clone the repository and put them where
+  =custom-theme-load-path= variable points to
+  (probably =~/.emacs.d/themes=), to enable the theme dynamically use
+  the command: =M-x load-theme RET= and select =moebius= dark or
+  yellow.
 
   To persist that between Emacs sessions put the snippet of code below
   somewhere inside in your ~init.el~ file.
 
   #+BEGIN_SRC emacs-lisp
 
-  ;; add eos-theme-dir to theme load path
+  ;; add themes to theme load path variable
   (add-to-list 'custom-theme-load-path
                (concat user-emacs-directory "themes"))
 
-  ;; load theme
+  ;; load theme (yellow version)
   (load-theme 'moebius-yellow t)
+
+  ;; dark theme (main version)
+  ;; (load-theme 'moebius t)
 
   #+END_SRC
 
