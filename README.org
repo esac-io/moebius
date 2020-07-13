@@ -5,7 +5,7 @@
 
   Just a simple Emacs theme with focus on transparent frames.
   The name is just a humble homage to a grate artist called: Jean
-  "moebius" Giraud, may you rest in peace and love.
+  "Moebius" Giraud, may you rest in peace and love.
 
   Your priceless work and contributions will never be forgotten,
   let them inspiring generations to come.
@@ -13,17 +13,17 @@
 * Overview
 
   If you use some composition software it's possible to make Emacs
-  window (the frame) transparent over the display server (Xorg for
-  example), a lot of themes does not take that in count, when the
+  window (the terminal/frame) transparent over the display server
+  (Xorg for example), a lot of themes does not take that in count, when the
   colors are chosen to compose the theme in question.
 
-  As I use Emacs with compton compositor (and apply 90% of opacity to
-  it) to make the frame transparent was necessary to create a new theme
-  to assert the faces (colors and other properties), to provide
-  a clear view of the items displayed on the screen.
+  As I use Emacs with =compton= compositor (and apply 70-90 percent of
+  opacity to it) to make the frame transparent was necessary to create
+  a new themes to assert the faces (colors and other properties),
+  to provide a clear view of the items displayed on the screen.
 
-  The files moebius-theme.el (the dark version) and
-  moebius-theme-yellow.el (light yellow version) are the results
+  The files =moebius-theme.el= (the dark version) and
+  =moebius-theme-yellow.el= (light yellow version) are the results
   of this experimentation over the last year.
 
 * Installation
@@ -39,15 +39,18 @@
 
   #+BEGIN_SRC emacs-lisp
 
-  ;; add themes to theme load path variable
+  ;; add ~/.emacs.d/themes  to theme load path variable
   (add-to-list 'custom-theme-load-path
                (concat user-emacs-directory "themes"))
 
-  ;; load theme (yellow version)
-  (load-theme 'moebius-yellow t)
+  ;; load theme (light version)
+  (load-theme 'moebius-sun t)
 
-  ;; dark theme (main version)
-  ;; (load-theme 'moebius t)
+  ;; load theme (dark version)
+  ;; (load-theme 'moebius-moon t)
+
+  ;; load theme (transparent)
+  ;; (load-theme 'moebius-glass t)
 
   #+END_SRC
 
